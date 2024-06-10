@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#hud {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* Adjusted for narrower gaps */
+}
+
+.hud-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px; /* Adjusted for smaller gap between icon and bar */
+}
+
+.hud-icon {
+    color: white;
+    font-size: 15px; /* Adjust icon size as needed */
+}
+
+.hud-bar {
+    width: 40px; /* Width of the bar */
+    height: 5px; /* Height of the bar */
+    background: linear-gradient(45deg, #2f2f2f 25%, #555 25%, #555 50%, #2f2f2f 50%, #2f2f2f 75%, #555 75%, #555 100%);
+    background-size: 10px 10px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgb(46, 46, 46); /* Border width and color */
+}
+
+.hud-bar > div {
+    height: 100%;
+    transition: width 0.5s, background-color 0.5s;
+}
+
+#health-bar > div {
+    background-color: rgb(56, 214, 98);
+}
+
+#armor-bar > div {
+    background-color: #2a64a7;
+}
+
+#food-bar > div {
+    background-color: #ec82fa;
+}
+
+#water-bar > div {
+    background-color: #5cb1f6;
+}
+
+#voice-bar > div {
+    background-color: grey; /* Default color for voice bar */
+}
+
+#voice-bar > div {
+    background-color: grey; /* Default color for voice bar */
+    width: 0%; /* Default width, will be updated dynamically */
+}
